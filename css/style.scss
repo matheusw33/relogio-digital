@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+
+$azul-escuro:  #3C486B;
+$preto: #000;
+$azul-claro: #BAD7E9;
+$amarelo-claro: #FCFFE7;
+$vermelho: #FF4A4A;
+$laranja: #FF9551;
+$branco: #FFF;
+$font-principal:'Open Sans', sans-serif;
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    background-image: linear-gradient(to left, $vermelho, $laranja);
+    font-family: $font-principal;
+    @include flex-center();
+    height: 100vh;
+
+    .relogio{
+        @include flex-center();
+        background-color: transparent;
+        box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, .2);
+        padding: 2em 1em;
+        border-radius: 5px;
+        gap: 1em;
+
+        .info{
+            @include flex-center();
+            flex-direction: column;
+            padding: 1em;
+            border-radius: 5px;
+            background-color: $preto;
+            width: 60px;
+            color: $branco;
+            gap: .5em;
+
+            .numero{
+                font-size: 2em;
+            }
+        }
+    }
+}
